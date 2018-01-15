@@ -385,6 +385,10 @@
 		99802057200C493500CF64FE /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99802056200C493500CF64FE /* MyViewController.m */; };
 		9980205D200C512B00CF64FE /* UserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9980205C200C512B00CF64FE /* UserInfoViewController.m */; };
 		99802060200C514000CF64FE /* UserInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9980205F200C514000CF64FE /* UserInfoView.m */; };
+		99802069200CA76C00CF64FE /* CaseEntrustListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99802068200CA76C00CF64FE /* CaseEntrustListViewController.m */; };
+		9980206C200CA78200CF64FE /* CaseEntrustListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9980206B200CA78200CF64FE /* CaseEntrustListView.m */; };
+		99802072200CAACF00CF64FE /* ReleaseCaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99802071200CAACF00CF64FE /* ReleaseCaseView.m */; };
+		99802075200CAAD900CF64FE /* ReleaseCaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99802074200CAAD900CF64FE /* ReleaseCaseViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -766,6 +770,14 @@
 		9980205C200C512B00CF64FE /* UserInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserInfoViewController.m; sourceTree = "<group>"; };
 		9980205E200C514000CF64FE /* UserInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInfoView.h; sourceTree = "<group>"; };
 		9980205F200C514000CF64FE /* UserInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserInfoView.m; sourceTree = "<group>"; };
+		99802067200CA76C00CF64FE /* CaseEntrustListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CaseEntrustListViewController.h; sourceTree = "<group>"; };
+		99802068200CA76C00CF64FE /* CaseEntrustListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CaseEntrustListViewController.m; sourceTree = "<group>"; };
+		9980206A200CA78200CF64FE /* CaseEntrustListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CaseEntrustListView.h; sourceTree = "<group>"; };
+		9980206B200CA78200CF64FE /* CaseEntrustListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CaseEntrustListView.m; sourceTree = "<group>"; };
+		99802070200CAACF00CF64FE /* ReleaseCaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReleaseCaseView.h; sourceTree = "<group>"; };
+		99802071200CAACF00CF64FE /* ReleaseCaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReleaseCaseView.m; sourceTree = "<group>"; };
+		99802073200CAAD900CF64FE /* ReleaseCaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReleaseCaseViewController.h; sourceTree = "<group>"; };
+		99802074200CAAD900CF64FE /* ReleaseCaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReleaseCaseViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1588,6 +1600,7 @@
 		99802030200C469D00CF64FE /* 首页 */ = {
 			isa = PBXGroup;
 			children = (
+				9980206D200CAA9300CF64FE /* 发布案件 */,
 				99802031200C46A400CF64FE /* 首页 */,
 			);
 			path = "首页";
@@ -1658,6 +1671,7 @@
 		99802044200C485F00CF64FE /* 案件 */ = {
 			isa = PBXGroup;
 			children = (
+				99802061200CA56700CF64FE /* 案件委托列表 */,
 				99802045200C487E00CF64FE /* 案件 */,
 			);
 			path = "案件";
@@ -1749,6 +1763,60 @@
 			children = (
 				9980205B200C512B00CF64FE /* UserInfoViewController.h */,
 				9980205C200C512B00CF64FE /* UserInfoViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		99802061200CA56700CF64FE /* 案件委托列表 */ = {
+			isa = PBXGroup;
+			children = (
+				99802063200CA62C00CF64FE /* controller */,
+				99802062200CA62400CF64FE /* view */,
+			);
+			path = "案件委托列表";
+			sourceTree = "<group>";
+		};
+		99802062200CA62400CF64FE /* view */ = {
+			isa = PBXGroup;
+			children = (
+				9980206A200CA78200CF64FE /* CaseEntrustListView.h */,
+				9980206B200CA78200CF64FE /* CaseEntrustListView.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		99802063200CA62C00CF64FE /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				99802067200CA76C00CF64FE /* CaseEntrustListViewController.h */,
+				99802068200CA76C00CF64FE /* CaseEntrustListViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		9980206D200CAA9300CF64FE /* 发布案件 */ = {
+			isa = PBXGroup;
+			children = (
+				9980206F200CAAAD00CF64FE /* controller */,
+				9980206E200CAAA800CF64FE /* view */,
+			);
+			path = "发布案件";
+			sourceTree = "<group>";
+		};
+		9980206E200CAAA800CF64FE /* view */ = {
+			isa = PBXGroup;
+			children = (
+				99802070200CAACF00CF64FE /* ReleaseCaseView.h */,
+				99802071200CAACF00CF64FE /* ReleaseCaseView.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		9980206F200CAAAD00CF64FE /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				99802073200CAAD900CF64FE /* ReleaseCaseViewController.h */,
+				99802074200CAAD900CF64FE /* ReleaseCaseViewController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -1946,6 +2014,7 @@
 				9910E6A820088BC6009F1DAF /* NSString+ACMediaExt.h in Sources */,
 				99802040200C482200CF64FE /* ConsultationView.m in Sources */,
 				9910E6A920088BC6009F1DAF /* UIImage+ACGif.h in Sources */,
+				99802072200CAACF00CF64FE /* ReleaseCaseView.m in Sources */,
 				9910E6AA20088BC6009F1DAF /* UIImageView+ACMediaExt.h in Sources */,
 				9910E6AB20088BC6009F1DAF /* UIView+ACMediaExt.h in Sources */,
 				9910E6AC20088BC6009F1DAF /* UIViewController+ACMediaExt.h in Sources */,
@@ -1957,6 +2026,7 @@
 				9910E6B220088BC6009F1DAF /* ImageSelectedOff@3x.png in Sources */,
 				9910E6B320088BC6009F1DAF /* ImageSelectedOn.png in Sources */,
 				9910E6B420088BC6009F1DAF /* ImageSelectedOn@2x.png in Sources */,
+				99802069200CA76C00CF64FE /* CaseEntrustListViewController.m in Sources */,
 				9910E6B520088BC6009F1DAF /* ImageSelectedOn@3x.png in Sources */,
 				9910E6B620088BC6009F1DAF /* ImageSelectedSmallOff.png in Sources */,
 				9910E6B720088BC6009F1DAF /* ImageSelectedSmallOff@2x.png in Sources */,
@@ -2013,6 +2083,7 @@
 				9910E6E720088BC7009F1DAF /* UIView+Layout.h in Sources */,
 				9910E6E820088BC7009F1DAF /* AFHTTPSessionManager.h in Sources */,
 				9910E6E920088BC7009F1DAF /* AFNetworking.h in Sources */,
+				9980206C200CA78200CF64FE /* CaseEntrustListView.m in Sources */,
 				9910E6EA20088BC7009F1DAF /* AFNetworkReachabilityManager.h in Sources */,
 				9910E6EB20088BC7009F1DAF /* AFSecurityPolicy.h in Sources */,
 				9910E6EC20088BC7009F1DAF /* AFURLRequestSerialization.h in Sources */,
@@ -2176,6 +2247,7 @@
 				9910E68720088A3A009F1DAF /* NSString+Hash.m in Sources */,
 				9910E66A20088A3A009F1DAF /* MJRefreshBackGifFooter.m in Sources */,
 				9910E60420088A39009F1DAF /* UIImageView+ACMediaExt.m in Sources */,
+				99802075200CAAD900CF64FE /* ReleaseCaseViewController.m in Sources */,
 				9910E67820088A3A009F1DAF /* NSData+ImageContentType.m in Sources */,
 				9910E67920088A3A009F1DAF /* SDImageCache.m in Sources */,
 				9910E69920088A58009F1DAF /* ZQTools.m in Sources */,
