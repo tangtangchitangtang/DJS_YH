@@ -7,7 +7,11 @@
 //
 
 #import "AppDelegate.h"
-
+#import "LogingViewController.h"
+#import "HomeViewController.h"
+#import "ConsultationViewController.h"
+#import "CaseViewController.h"
+#import "MyViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -16,7 +20,48 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+//    LogingViewController *yindao=[[LogingViewController alloc] init];
+//    UINavigationController *nav1= [[UINavigationController alloc] initWithRootViewController:yindao];
+//    self.window.rootViewController=nav1;
+    
+    HomeViewController *shouye=[[HomeViewController alloc] init];
+    ConsultationViewController *huDong=[[ConsultationViewController alloc] init];
+    CaseViewController *caseView=[[CaseViewController alloc] init];
+    MyViewController *youJi=[[MyViewController alloc] init];
+    
+    
+    
+    UINavigationController *nav1= [[UINavigationController alloc] initWithRootViewController:shouye];
+    UINavigationController *nav2= [[UINavigationController alloc] initWithRootViewController:huDong];
+     UINavigationController *nav3= [[UINavigationController alloc] initWithRootViewController:caseView];
+    UINavigationController *nav4= [[UINavigationController alloc] initWithRootViewController:youJi];
+    
+    nav1.title=@"首页";
+    nav2.title=@"资讯";
+    nav3.title=@"案件";
+    nav4.title=@"我的";
+    
+    [nav1.tabBarItem setSelectedImage:[UIImage imageNamed:@"首页1"]];
+    [nav1.tabBarItem setImage:[UIImage imageNamed:@"首页"]];
+    
+    [nav2.tabBarItem setSelectedImage:[UIImage imageNamed:@"资讯1"]];
+    [nav2.tabBarItem setImage:[UIImage imageNamed:@"资讯"]];
+    
+    [nav3.tabBarItem setSelectedImage:[UIImage imageNamed:@"案件1"]];
+    [nav3.tabBarItem setImage:[UIImage imageNamed:@"案件"]];
+    
+    [nav4.tabBarItem setSelectedImage:[UIImage imageNamed:@"我的1"]];
+    [nav4.tabBarItem setImage:[UIImage imageNamed:@"我的"]];
+    
+    [[UITabBar appearance] setTintColor:_backgroundColor];
+    
+    UITabBarController *bar=[[UITabBarController alloc] init];
+    bar.viewControllers=@[nav1,nav2,nav3,nav4];
+    
+    self.window.rootViewController=bar;
+    
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

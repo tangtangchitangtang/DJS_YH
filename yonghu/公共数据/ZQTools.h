@@ -57,7 +57,7 @@ typedef void(^MyBlock)(int value);
 //tableView 用来结束上下拉刷新的状态  不传不结束
 //view 当前vc的view 显示菊花
 //responseObjectBlock 成功之行的block
-+ (void)AFNGetDataUrl:(NSString *)url Dict:(NSDictionary *)dict andTableView:(UIScrollView *)tableview andView:(UIView *)view andSuccessBlock:(responseObjectBlock)responseObjectBlock anderrorBlock:(void(^)())errorBlock;
++ (void)AFNGetDataUrl:(NSString *)url Dict:(NSDictionary *)dict andTableView:(UIScrollView *)tableview andView:(UIView *)view andSuccessBlock:(responseObjectBlock)responseObjectBlock anderrorBlock:(void(^)(void))errorBlock;
 
 + (void)AFNPostDataUrl:(NSString *)url Dict:(NSDictionary *)dict andTableView:(UIScrollView *)tableview andView:(UIView *)view andSuccessBlock:(responseObjectBlock)responseObjectBlock anderrorBlock:(void(^)(void))errorBlock;
 
@@ -104,7 +104,7 @@ typedef void(^MyBlock)(int value);
 +(NSString *)curTimeString;
 
 #pragma mark————————————————上传图片
-+ (void)afnPostImageWithDict:(NSDictionary *)dict WithAddressUrl:(NSString *)addressUrl isOrUTF8:(BOOL)UTF8 withImageArr:(NSArray *)imageArr withFileName:(NSString *)fileName   WithView:(UIView *)view   success:(responseObjectBlock)responseObjectBlock;
++ (void)afnPostImageWithDict:(NSDictionary *)dict WithAddressUrl:(NSString *)addressUrl withImageArr:(NSArray *)imageArr withFileName:(NSString *)fileName   WithView:(UIView *)view   success:(responseObjectBlock)responseObjectBlock;
 
 
 #pragma mark————————————拨打电话(依赖 CoreMediaFuncManagerVC)

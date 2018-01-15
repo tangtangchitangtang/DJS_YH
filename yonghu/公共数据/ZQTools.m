@@ -313,7 +313,7 @@
     
 }
 
-+ (void)AFNGetDataUrl:(NSString *)url Dict:(NSDictionary *)dict andTableView:(UIScrollView *)tableview andView:(UIView *)view andSuccessBlock:(responseObjectBlock)responseObjectBlock anderrorBlock:(void(^)())errorBlock
++ (void)AFNGetDataUrl:(NSString *)url Dict:(NSDictionary *)dict andTableView:(UIScrollView *)tableview andView:(UIView *)view andSuccessBlock:(responseObjectBlock)responseObjectBlock anderrorBlock:(void(^)(void))errorBlock
 {
     
     
@@ -669,7 +669,7 @@
 
 
 #pragma mark————————————————上传图片
-+ (void)afnPostImageWithDict:(NSDictionary *)dict WithAddressUrl:(NSString *)addressUrl isOrUTF8:(BOOL)UTF8 withImageArr:(NSArray *)imageArr withFileName:(NSString *)fileName   WithView:(UIView *)view   success:(responseObjectBlock)responseObjectBlock{
++ (void)afnPostImageWithDict:(NSDictionary *)dict WithAddressUrl:(NSString *)addressUrl  withImageArr:(NSArray *)imageArr withFileName:(NSString *)fileName   WithView:(UIView *)view   success:(responseObjectBlock)responseObjectBlock{
     
     //菊花
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
@@ -678,28 +678,9 @@
     
     [hud showAnimated:YES];
     
-    NSString *source=@"02";
-    NSString *channel=@"pingguo";
     
     
-    NSDictionary *dic2 = [NSKeyedUnarchiver unarchiveObjectWithFile:_userModelFile];
     
-    NSString *client_id = [[NSUUID UUID] UUIDString];
-    NSString *app_version=[self getAPPBanben];
-    NSString *os_name=@"Ios";
-    NSString *client_model = [self iphoneType];//方法在下面
-    NSString *uid=[dic2 objectForKey:@"uid"];
-    
-    
-    NSString *ip=[self deviceIPAdress];
-    //    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    //    NSDictionary *dic = [defaults objectForKey:@"dingWei"];
-    //    NSString *position=[dic objectForKey:@"cityName"];
-    NSString *position=@"chongqing";
-    //    position= [self firstCharactor:position];
-    
-    NSString *timestamp=[self NSDateToTimeCuo:[NSDate new]];
-  
     NSString *paramsStr;
     
     
@@ -710,46 +691,29 @@
         str = [str stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
         str= [self encodeString:str];
         if (i==0) {
-            paramsStr=[NSString stringWithFormat:@"%@=%@&",nameArr[i],str];
+            paramsStr=[NSString stringWithFormat:@"%@%@",nameArr[i],str];
         }else{
-            paramsStr=[NSString stringWithFormat:@"%@%@=%@&",paramsStr,nameArr[i],str];
+            paramsStr=[NSString stringWithFormat:@"%@%@%@",paramsStr,nameArr[i],str];
         }
+        
     }
-    paramsStr=[paramsStr substringToIndex:paramsStr.length-1];
-    
     if ([self charIsNil:paramsStr]) {
         paramsStr=@"";
     }
-
-    NSString *sign = [NSString stringWithFormat:@"%@%@%@%@%@%@%@", app_key, source, channel, app_version, client_id, timestamp, paramsStr];
     
+    NSString *sign = [NSString stringWithFormat:@"%@dujiaoshoulawyer",  paramsStr];
     
+    sign=[[sign md5String] uppercaseString];
     
-    sign=[sign md5String];
-    
-    
+    NSMutableDictionary *typeDic=[NSMutableDictionary dictionaryWithDictionary:dict];
+    [typeDic setObject:sign forKey:@"sign"];
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    
-    [manager.requestSerializer setValue:app_key forHTTPHeaderField:@"app_key"];
-    [manager.requestSerializer setValue:app_version forHTTPHeaderField:@"app_version"];
-    [manager.requestSerializer setValue:channel forHTTPHeaderField:@"channel"];
-    [manager.requestSerializer setValue:client_id forHTTPHeaderField:@"client_id"];
-    [manager.requestSerializer setValue:client_model forHTTPHeaderField:@"client_model"];
-    [manager.requestSerializer setValue:ip forHTTPHeaderField:@"ip"];
-    [manager.requestSerializer setValue:os_name forHTTPHeaderField:@"os_name"];
-    [manager.requestSerializer setValue:position forHTTPHeaderField:@"position"];
-    [manager.requestSerializer setValue:source forHTTPHeaderField:@"source"];
-    [manager.requestSerializer setValue:timestamp forHTTPHeaderField:@"timestamp"];
-    [manager.requestSerializer setValue:uid forHTTPHeaderField:@"uid"];
-    [manager.requestSerializer setValue:sign forHTTPHeaderField:@"sign"];
-    
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"text/plain", @"text/json", @"text/javascript", @"text/html", nil];
-    
-    
-    
-    
-    [manager POST:[NSString stringWithFormat:@"%@/%@",_addressUrl,addressUrl] parameters:dict constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+    [manager.requestSerializer setHTTPShouldHandleCookies:YES];//默认是yes
+    [manager.securityPolicy setAllowInvalidCertificates:YES];
+   
+    [manager POST:[NSString stringWithFormat:@"%@/%@",_addressUrl,addressUrl] parameters:typeDic constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
         
         
         //这个就是流参数
@@ -775,9 +739,24 @@
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         
+        NSLog(@"\n接口调用成功___\n根地址___%@\n接口:%@ \n参数:%@  \n返回的参数%@",_addressUrl,addressUrl,dict,[[responseObject description] kdtk_stringByReplaceingUnicode]);
+        
+        
         [MBProgressHUD hideHUDForView:view animated:YES];
         
-         responseObjectBlock(responseObject);
+        BaseModel *dataModel = [BaseModel mj_objectWithKeyValues:responseObject];
+        if ([dataModel.status isEqualToString:@"1"]) {
+            if(responseObjectBlock!=nil)
+            {
+                responseObjectBlock(dataModel.data);
+            }
+            return ;
+        }
+        else
+        {
+            [ZQTools svpInfo:dataModel.message];
+        }
+        
         
     }  failure:^(NSURLSessionDataTask *task, NSError *error) {
         

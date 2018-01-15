@@ -21,7 +21,7 @@
         if(self!=self.navigationController.viewControllers[0])
         {
             //左上角返回按钮
-            self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"返回"] style:UIBarButtonItemStylePlain target:self action:@selector(popVc)];
+            self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"返回1"] style:UIBarButtonItemStylePlain target:self action:@selector(popVc)];
         }
     }
     
