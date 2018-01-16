@@ -1298,7 +1298,18 @@
     //获取并返回首字母
     return [pinYin substringToIndex:1];
 }
-
++(void)ToLoging:(UIViewController *)controller{
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"你还未登录请前往登录" preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"取消"style:UIAlertActionStyleDefault   handler:nil];
+    
+    UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:@"去登录" style:UIAlertActionStyleDefault  handler:^(UIAlertAction * action) {
+        _loginWithVc(controller);
+    }];
+    [alert addAction:defaultAction];
+    [alert addAction:cancelAction];
+    [controller presentViewController:alert animated:YES completion:nil];
+}
 
 
 @end

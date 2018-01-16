@@ -7,7 +7,7 @@
 //
 
 #import "HomeView.h"
-
+#import "ReleaseCaseViewController.h"
 @implementation HomeView
 
 -(void)creatView{
@@ -33,7 +33,7 @@
         [imageArr addObject:imageStr];
     }
     
-    [ZQTools getHederImage:CGRectMake(0, 24, _mainW,  _mainH*0.34) :imageArr :40 :_scrollView :^(int value) {
+    [ZQTools getHederImage:CGRectMake(0, 24, _mainW,  _mainH*0.34) :imageArr :10 :_scrollView :^(int value) {
         NSLog(@"%d",value);
     }];
     
@@ -55,6 +55,9 @@
         make.top.mas_equalTo(8);
     }];
     caseView.backgroundColor=ColorWithRGB(254, 252, 230);
+    caseView.userInteractionEnabled=YES;
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(pushToReleaseCaseView:)];
+    [caseView addGestureRecognizer:tapGesture];
     
     UIImageView *caseImage=[UIImageView new];
     [caseView addSubview:caseImage];
@@ -243,4 +246,14 @@
      _scrollView.contentSize = CGSizeMake(0, _mainH*0.34+300+550*_mainHeight);
 }
 
+-(void)pushToReleaseCaseView:(UITapGestureRecognizer *)tap{
+     NSDictionary *userDic = [NSKeyedUnarchiver unarchiveObjectWithFile:_userModelFile];
+    if (userDic==nil) {
+        [ZQTools ToLoging:self.viewController];
+    }
+    else{
+        ReleaseCaseViewController *releaseCase=[[ReleaseCaseViewController alloc] init];
+        [ZQTools pushNextViewController:self.viewController andRootController:releaseCase];
+    }
+}
 @end

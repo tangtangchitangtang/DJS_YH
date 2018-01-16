@@ -320,7 +320,7 @@
 
 -(void)pushToLogin:(UITapGestureRecognizer *)tap{
     if (_userDic.count==0) {
-        _loginWithVc(self.viewController);
+        [ZQTools ToLoging:self.viewController];
     }
     else{
         UserInfoViewController *userInfo=[[UserInfoViewController alloc] init];

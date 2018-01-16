@@ -144,4 +144,5 @@ typedef void(^MyBlock)(int value);
 //判断密码的长度
 +(BOOL)pwdIsYes:(NSString *)pwdStr;
 
++(void)ToLoging:(UIViewController *)controller;
 @end

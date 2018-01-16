@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.navigationItem.title=@"案件委托";
     _aView=[ReleaseCaseView new];
     [self.view addSubview:_aView];
     [_aView mas_makeConstraints:^(MASConstraintMaker *make) {

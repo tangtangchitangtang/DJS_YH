@@ -8,6 +8,11 @@
 
 #import "BaseView.h"
 
-@interface ReleaseCaseView : BaseView
+@interface ReleaseCaseView : BaseView<UITextFieldDelegate>
+@property(nonatomic,strong)UIScrollView *scrollView;
+@property(nonatomic,strong)UITextField *nameText;
+@property(nonatomic,strong)UILabel *addLabel;
+@property(nonatomic,strong)NSDictionary *caseDic;
+@property(nonatomic,strong)UIView *bottomView;
 
 @end

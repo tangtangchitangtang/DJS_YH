@@ -389,6 +389,8 @@
 		9980206C200CA78200CF64FE /* CaseEntrustListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9980206B200CA78200CF64FE /* CaseEntrustListView.m */; };
 		99802072200CAACF00CF64FE /* ReleaseCaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99802071200CAACF00CF64FE /* ReleaseCaseView.m */; };
 		99802075200CAAD900CF64FE /* ReleaseCaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99802074200CAAD900CF64FE /* ReleaseCaseViewController.m */; };
+		9980207C200DCAC200CF64FE /* selectRegionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9980207B200DCAC200CF64FE /* selectRegionView.m */; };
+		99802083200DDE6D00CF64FE /* SelectCaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99802082200DDE6D00CF64FE /* SelectCaseView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -778,6 +780,10 @@
 		99802071200CAACF00CF64FE /* ReleaseCaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReleaseCaseView.m; sourceTree = "<group>"; };
 		99802073200CAAD900CF64FE /* ReleaseCaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReleaseCaseViewController.h; sourceTree = "<group>"; };
 		99802074200CAAD900CF64FE /* ReleaseCaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReleaseCaseViewController.m; sourceTree = "<group>"; };
+		9980207A200DCAC100CF64FE /* selectRegionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = selectRegionView.h; sourceTree = "<group>"; };
+		9980207B200DCAC200CF64FE /* selectRegionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = selectRegionView.m; sourceTree = "<group>"; };
+		99802081200DDE6D00CF64FE /* SelectCaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectCaseView.h; sourceTree = "<group>"; };
+		99802082200DDE6D00CF64FE /* SelectCaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectCaseView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1474,6 +1480,8 @@
 		9910E69120088A52009F1DAF /* 工具 */ = {
 			isa = PBXGroup;
 			children = (
+				9980207D200DDDFC00CF64FE /* 案件选择 */,
+				99802079200DCAB100CF64FE /* 地址选择 */,
 				9910E69220088A52009F1DAF /* 拓展 */,
 			);
 			path = "工具";
@@ -1821,6 +1829,24 @@
 			path = controller;
 			sourceTree = "<group>";
 		};
+		99802079200DCAB100CF64FE /* 地址选择 */ = {
+			isa = PBXGroup;
+			children = (
+				9980207A200DCAC100CF64FE /* selectRegionView.h */,
+				9980207B200DCAC200CF64FE /* selectRegionView.m */,
+			);
+			path = "地址选择";
+			sourceTree = "<group>";
+		};
+		9980207D200DDDFC00CF64FE /* 案件选择 */ = {
+			isa = PBXGroup;
+			children = (
+				99802081200DDE6D00CF64FE /* SelectCaseView.h */,
+				99802082200DDE6D00CF64FE /* SelectCaseView.m */,
+			);
+			path = "案件选择";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2024,6 +2050,7 @@
 				9910E6B020088BC6009F1DAF /* ImageSelectedOff.png in Sources */,
 				9910E6B120088BC6009F1DAF /* ImageSelectedOff@2x.png in Sources */,
 				9910E6B220088BC6009F1DAF /* ImageSelectedOff@3x.png in Sources */,
+				9980207C200DCAC200CF64FE /* selectRegionView.m in Sources */,
 				9910E6B320088BC6009F1DAF /* ImageSelectedOn.png in Sources */,
 				9910E6B420088BC6009F1DAF /* ImageSelectedOn@2x.png in Sources */,
 				99802069200CA76C00CF64FE /* CaseEntrustListViewController.m in Sources */,
@@ -2039,6 +2066,7 @@
 				9910E6BE20088BC6009F1DAF /* PlayButtonOverlayLarge@3x.png in Sources */,
 				9910E6BF20088BC6009F1DAF /* PlayButtonOverlayLargeTap.png in Sources */,
 				9910E6C020088BC6009F1DAF /* PlayButtonOverlayLargeTap@2x.png in Sources */,
+				99802083200DDE6D00CF64FE /* SelectCaseView.m in Sources */,
 				9910E6C120088BC6009F1DAF /* PlayButtonOverlayLargeTap@3x.png in Sources */,
 				9910E6C220088BC6009F1DAF /* UIBarButtonItemArrowLeft.png in Sources */,
 				9910E6C320088BC6009F1DAF /* UIBarButtonItemArrowLeft@2x.png in Sources */,
