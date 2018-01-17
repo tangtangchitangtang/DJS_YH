@@ -11,6 +11,7 @@
 @implementation UserInfoView
 
 -(void)creatView{
+    [self.viewController wr_setNavBarBackgroundAlpha:0];
     self.backgroundColor=_LightGrey;
     UIView *beiJingView=[UIView new];
     [self addSubview:beiJingView];

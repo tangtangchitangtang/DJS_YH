@@ -28,13 +28,13 @@
     ConsultationViewController *huDong=[[ConsultationViewController alloc] init];
     CaseViewController *caseView=[[CaseViewController alloc] init];
     MyViewController *youJi=[[MyViewController alloc] init];
-    
-    
+   
     
     UINavigationController *nav1= [[UINavigationController alloc] initWithRootViewController:shouye];
     UINavigationController *nav2= [[UINavigationController alloc] initWithRootViewController:huDong];
      UINavigationController *nav3= [[UINavigationController alloc] initWithRootViewController:caseView];
     UINavigationController *nav4= [[UINavigationController alloc] initWithRootViewController:youJi];
+    
     
     nav1.title=@"首页";
     nav2.title=@"资讯";

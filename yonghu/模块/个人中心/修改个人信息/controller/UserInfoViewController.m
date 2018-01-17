@@ -17,7 +17,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title=@"个人信息";
+    
+    self.navigationItem.title=@"个人中心";
+    
     _aView=[UserInfoView new];
     [self.view addSubview:_aView];
     [_aView mas_makeConstraints:^(MASConstraintMaker *make) {

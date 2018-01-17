@@ -8,9 +8,12 @@
 
 #import "HomeView.h"
 #import "ReleaseCaseViewController.h"
+#import "DocumentViewController.h"
 @implementation HomeView
 
 -(void)creatView{
+    
+    
     self.backgroundColor=_LightGrey;
     _scrollView=[UIScrollView new];
     [self addSubview:_scrollView];
@@ -25,6 +28,13 @@
     _scrollView.showsHorizontalScrollIndicator = FALSE;
     _scrollView.bounces = NO;
     
+    if (@available(iOS 11.0, *)) {
+        self.scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    } else {
+        self.viewController.automaticallyAdjustsScrollViewInsets = NO;
+    }
+
+    
     NSMutableArray *imageArr=[NSMutableArray arrayWithCapacity:0];
     for (int i=0; i<_CarouselArr.count; i++) {
         NSDictionary *dic=_CarouselArr[i];
@@ -33,7 +43,16 @@
         [imageArr addObject:imageStr];
     }
     
-    [ZQTools getHederImage:CGRectMake(0, 24, _mainW,  _mainH*0.34) :imageArr :10 :_scrollView :^(int value) {
+    UIView *imageView=[UIView new];
+    [_scrollView addSubview:imageView];
+    [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(0);
+        make.top.mas_equalTo(10);
+        make.width.mas_equalTo(_mainW);
+        make.height.mas_equalTo(_mainH*0.34);
+    }];
+    
+    [ZQTools getHederImage:CGRectMake(0, 10, _mainW,  _mainH*0.34) :imageArr :10 :imageView :^(int value) {
         NSLog(@"%d",value);
     }];
     
@@ -43,7 +62,7 @@
         make.left.mas_equalTo(3);
         make.width.mas_equalTo(_mainW-6);
         make.height.mas_equalTo(180);
-        make.top.mas_equalTo(_mainH*0.34+24);
+        make.top.mas_equalTo(imageView.mas_bottom);
     }];
     
     UIView *caseView=[UIView new];
@@ -93,6 +112,10 @@
                 make.height.mas_equalTo(55);
             }];
             view.backgroundColor=[UIColor whiteColor];
+            view.tag=index;
+            view.userInteractionEnabled=YES;
+            UITapGestureRecognizer *tapGesture2 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(pushToDocument:)];
+            [view addGestureRecognizer:tapGesture2];
             
             UIImageView *image=[UIImageView new];
             [view addSubview:image];
@@ -250,10 +273,26 @@
      NSDictionary *userDic = [NSKeyedUnarchiver unarchiveObjectWithFile:_userModelFile];
     if (userDic==nil) {
         [ZQTools ToLoging:self.viewController];
+        return;
     }
     else{
         ReleaseCaseViewController *releaseCase=[[ReleaseCaseViewController alloc] init];
         [ZQTools pushNextViewController:self.viewController andRootController:releaseCase];
+    }
+}
+
+-(void)pushToDocument:(UITapGestureRecognizer *)tap{
+    NSDictionary *userDic = [NSKeyedUnarchiver unarchiveObjectWithFile:_userModelFile];
+    if (userDic==nil) {
+        [ZQTools ToLoging:self.viewController];
+        return;
+    }
+    else{
+        if (tap.view.tag==0) {
+            DocumentViewController *releaseCase=[[DocumentViewController alloc] init];
+            [ZQTools pushNextViewController:self.viewController andRootController:releaseCase];
+        }
+       
     }
 }
 @end

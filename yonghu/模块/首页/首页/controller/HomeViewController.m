@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self wr_setNavBarBackgroundAlpha:0];
+      [self wr_setNavBarBackgroundAlpha:0];
     _aView=[HomeView new];
     [self.view addSubview:_aView];
     [_aView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -26,6 +26,7 @@
     _aView.viewController=self;
     [self loginView];
 }
+
 -(void)loginView{
     NSDictionary *dic=[NSDictionary dictionaryWithObjectsAndKeys:@"0",@"carousel_type", nil];
     [ZQTools AFNPostDataUrl:@"api/index/banner_list" Dict:dic andTableView:nil andView:self.view andSuccessBlock:^(id responseObject) {

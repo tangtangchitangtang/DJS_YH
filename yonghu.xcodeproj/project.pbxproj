@@ -172,7 +172,6 @@
 		9910E68320088A3A009F1DAF /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 9910E5D820088A39009F1DAF /* UIImageView+HighlightedWebCache.m */; };
 		9910E68420088A3A009F1DAF /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 9910E5DA20088A39009F1DAF /* UIImageView+WebCache.m */; };
 		9910E68520088A3A009F1DAF /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9910E5DC20088A39009F1DAF /* UIView+WebCacheOperation.m */; };
-		9910E68620088A3A009F1DAF /* WRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9910E5DF20088A39009F1DAF /* WRNavigationBar.m */; };
 		9910E68720088A3A009F1DAF /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = 9910E5E320088A39009F1DAF /* NSString+Hash.m */; };
 		9910E68820088A3A009F1DAF /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 9910E5E620088A39009F1DAF /* SSKeychain.m */; };
 		9910E68920088A3A009F1DAF /* SSKeychain.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9910E5E720088A39009F1DAF /* SSKeychain.strings */; };
@@ -341,7 +340,6 @@
 		9910E73420088BC7009F1DAF /* UIImageView+HighlightedWebCache.h in Sources */ = {isa = PBXBuildFile; fileRef = 9910E5D720088A39009F1DAF /* UIImageView+HighlightedWebCache.h */; };
 		9910E73520088BC7009F1DAF /* UIImageView+WebCache.h in Sources */ = {isa = PBXBuildFile; fileRef = 9910E5D920088A39009F1DAF /* UIImageView+WebCache.h */; };
 		9910E73620088BC7009F1DAF /* UIView+WebCacheOperation.h in Sources */ = {isa = PBXBuildFile; fileRef = 9910E5DB20088A39009F1DAF /* UIView+WebCacheOperation.h */; };
-		9910E73720088BC7009F1DAF /* WRNavigationBar.h in Sources */ = {isa = PBXBuildFile; fileRef = 9910E5DE20088A39009F1DAF /* WRNavigationBar.h */; };
 		9910E73820088BC7009F1DAF /* NSString+Hash.h in Sources */ = {isa = PBXBuildFile; fileRef = 9910E5E220088A39009F1DAF /* NSString+Hash.h */; };
 		9910E73920088BC7009F1DAF /* SSKeychain.h in Sources */ = {isa = PBXBuildFile; fileRef = 9910E5E520088A39009F1DAF /* SSKeychain.h */; };
 		9910E73A20088BC7009F1DAF /* SSKeychain.strings in Sources */ = {isa = PBXBuildFile; fileRef = 9910E5E720088A39009F1DAF /* SSKeychain.strings */; };
@@ -391,6 +389,11 @@
 		99802075200CAAD900CF64FE /* ReleaseCaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99802074200CAAD900CF64FE /* ReleaseCaseViewController.m */; };
 		9980207C200DCAC200CF64FE /* selectRegionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9980207B200DCAC200CF64FE /* selectRegionView.m */; };
 		99802083200DDE6D00CF64FE /* SelectCaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99802082200DDE6D00CF64FE /* SelectCaseView.m */; };
+		99802089200EDAD200CF64FE /* DocumentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99802088200EDAD200CF64FE /* DocumentViewController.m */; };
+		9980208C200EDAE400CF64FE /* DocumentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9980208B200EDAE400CF64FE /* DocumentView.m */; };
+		99802090200EEA8F00CF64FE /* SelectDocumentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9980208F200EEA8F00CF64FE /* SelectDocumentView.m */; };
+		9980209A200EF75B00CF64FE /* WRCustomNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 99802097200EF75A00CF64FE /* WRCustomNavigationBar.m */; };
+		9980209B200EF75B00CF64FE /* WRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 99802099200EF75A00CF64FE /* WRNavigationBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -715,8 +718,6 @@
 		9910E5DA20088A39009F1DAF /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		9910E5DB20088A39009F1DAF /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		9910E5DC20088A39009F1DAF /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
-		9910E5DE20088A39009F1DAF /* WRNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRNavigationBar.h; sourceTree = "<group>"; };
-		9910E5DF20088A39009F1DAF /* WRNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRNavigationBar.m; sourceTree = "<group>"; };
 		9910E5E220088A39009F1DAF /* NSString+Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hash.h"; sourceTree = "<group>"; };
 		9910E5E320088A39009F1DAF /* NSString+Hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hash.m"; sourceTree = "<group>"; };
 		9910E5E520088A39009F1DAF /* SSKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSKeychain.h; sourceTree = "<group>"; };
@@ -784,6 +785,16 @@
 		9980207B200DCAC200CF64FE /* selectRegionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = selectRegionView.m; sourceTree = "<group>"; };
 		99802081200DDE6D00CF64FE /* SelectCaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectCaseView.h; sourceTree = "<group>"; };
 		99802082200DDE6D00CF64FE /* SelectCaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectCaseView.m; sourceTree = "<group>"; };
+		99802087200EDAD200CF64FE /* DocumentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DocumentViewController.h; sourceTree = "<group>"; };
+		99802088200EDAD200CF64FE /* DocumentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DocumentViewController.m; sourceTree = "<group>"; };
+		9980208A200EDAE400CF64FE /* DocumentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DocumentView.h; sourceTree = "<group>"; };
+		9980208B200EDAE400CF64FE /* DocumentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DocumentView.m; sourceTree = "<group>"; };
+		9980208E200EEA8F00CF64FE /* SelectDocumentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectDocumentView.h; sourceTree = "<group>"; };
+		9980208F200EEA8F00CF64FE /* SelectDocumentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectDocumentView.m; sourceTree = "<group>"; };
+		99802096200EF75A00CF64FE /* WRCustomNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRCustomNavigationBar.h; sourceTree = "<group>"; };
+		99802097200EF75A00CF64FE /* WRCustomNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRCustomNavigationBar.m; sourceTree = "<group>"; };
+		99802098200EF75A00CF64FE /* WRNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRNavigationBar.h; sourceTree = "<group>"; };
+		99802099200EF75A00CF64FE /* WRNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRNavigationBar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -926,6 +937,7 @@
 		9910E4BE20088A39009F1DAF /* 第三方 */ = {
 			isa = PBXGroup;
 			children = (
+				99802095200EF75A00CF64FE /* WRNavigationBar */,
 				9910E69A20088B79009F1DAF /* MBProgressHUD */,
 				9910E4BF20088A39009F1DAF /* ACMediaFrame */,
 				9910E53320088A39009F1DAF /* AFNetworking */,
@@ -936,7 +948,6 @@
 				9910E57120088A39009F1DAF /* MJExtension */,
 				9910E58720088A39009F1DAF /* MJRefresh */,
 				9910E5BC20088A39009F1DAF /* SDWebImage */,
-				9910E5DD20088A39009F1DAF /* WRNavigationBar */,
 				9910E5E020088A39009F1DAF /* 加密 */,
 				9910E5EA20088A39009F1DAF /* 把文字转换成字典 */,
 				9910E5ED20088A39009F1DAF /* 计算文字高度 */,
@@ -1398,15 +1409,6 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
-		9910E5DD20088A39009F1DAF /* WRNavigationBar */ = {
-			isa = PBXGroup;
-			children = (
-				9910E5DE20088A39009F1DAF /* WRNavigationBar.h */,
-				9910E5DF20088A39009F1DAF /* WRNavigationBar.m */,
-			);
-			path = WRNavigationBar;
-			sourceTree = "<group>";
-		};
 		9910E5E020088A39009F1DAF /* 加密 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1480,6 +1482,7 @@
 		9910E69120088A52009F1DAF /* 工具 */ = {
 			isa = PBXGroup;
 			children = (
+				9980208D200EEA6800CF64FE /* 文书选择 */,
 				9980207D200DDDFC00CF64FE /* 案件选择 */,
 				99802079200DCAB100CF64FE /* 地址选择 */,
 				9910E69220088A52009F1DAF /* 拓展 */,
@@ -1608,6 +1611,7 @@
 		99802030200C469D00CF64FE /* 首页 */ = {
 			isa = PBXGroup;
 			children = (
+				99802084200EDA6C00CF64FE /* 代写文书 */,
 				9980206D200CAA9300CF64FE /* 发布案件 */,
 				99802031200C46A400CF64FE /* 首页 */,
 			);
@@ -1845,6 +1849,86 @@
 				99802082200DDE6D00CF64FE /* SelectCaseView.m */,
 			);
 			path = "案件选择";
+			sourceTree = "<group>";
+		};
+		99802084200EDA6C00CF64FE /* 代写文书 */ = {
+			isa = PBXGroup;
+			children = (
+				99802092200EF08A00CF64FE /* 支付 */,
+				99802091200EF07E00CF64FE /* 代写文书 */,
+			);
+			path = "代写文书";
+			sourceTree = "<group>";
+		};
+		99802085200EDA8000CF64FE /* view */ = {
+			isa = PBXGroup;
+			children = (
+				9980208A200EDAE400CF64FE /* DocumentView.h */,
+				9980208B200EDAE400CF64FE /* DocumentView.m */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		99802086200EDA8900CF64FE /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				99802087200EDAD200CF64FE /* DocumentViewController.h */,
+				99802088200EDAD200CF64FE /* DocumentViewController.m */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		9980208D200EEA6800CF64FE /* 文书选择 */ = {
+			isa = PBXGroup;
+			children = (
+				9980208E200EEA8F00CF64FE /* SelectDocumentView.h */,
+				9980208F200EEA8F00CF64FE /* SelectDocumentView.m */,
+			);
+			path = "文书选择";
+			sourceTree = "<group>";
+		};
+		99802091200EF07E00CF64FE /* 代写文书 */ = {
+			isa = PBXGroup;
+			children = (
+				99802086200EDA8900CF64FE /* controller */,
+				99802085200EDA8000CF64FE /* view */,
+			);
+			name = "代写文书";
+			sourceTree = "<group>";
+		};
+		99802092200EF08A00CF64FE /* 支付 */ = {
+			isa = PBXGroup;
+			children = (
+				99802094200EF09D00CF64FE /* controller */,
+				99802093200EF09400CF64FE /* view */,
+			);
+			name = "支付";
+			sourceTree = "<group>";
+		};
+		99802093200EF09400CF64FE /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		99802094200EF09D00CF64FE /* controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		99802095200EF75A00CF64FE /* WRNavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				99802096200EF75A00CF64FE /* WRCustomNavigationBar.h */,
+				99802097200EF75A00CF64FE /* WRCustomNavigationBar.m */,
+				99802098200EF75A00CF64FE /* WRNavigationBar.h */,
+				99802099200EF75A00CF64FE /* WRNavigationBar.m */,
+			);
+			name = WRNavigationBar;
+			path = "../../../../Downloads/WRNavigationBar-master/WRNavigationBar";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2122,6 +2206,7 @@
 				9910E6F120088BC7009F1DAF /* FTNotificationIndicator.h in Sources */,
 				9910E6F220088BC7009F1DAF /* FTProgressIndicator.bundle in Sources */,
 				9910E6F320088BC7009F1DAF /* FTProgressIndicator.h in Sources */,
+				9980208C200EDAE400CF64FE /* DocumentView.m in Sources */,
 				9910E6F420088BC7009F1DAF /* FTToastIndicator.h in Sources */,
 				9910E6F520088BC7009F1DAF /* ImageCenterButton.h in Sources */,
 				9910E6F620088BC7009F1DAF /* Info.plist in Sources */,
@@ -2191,7 +2276,6 @@
 				9910E73420088BC7009F1DAF /* UIImageView+HighlightedWebCache.h in Sources */,
 				9910E73520088BC7009F1DAF /* UIImageView+WebCache.h in Sources */,
 				9910E73620088BC7009F1DAF /* UIView+WebCacheOperation.h in Sources */,
-				9910E73720088BC7009F1DAF /* WRNavigationBar.h in Sources */,
 				9910E73820088BC7009F1DAF /* NSString+Hash.h in Sources */,
 				9910E73920088BC7009F1DAF /* SSKeychain.h in Sources */,
 				9910E73A20088BC7009F1DAF /* SSKeychain.strings in Sources */,
@@ -2214,6 +2298,7 @@
 				9910E74A20088BC7009F1DAF /* BasePanGestureRecognizer.h in Sources */,
 				9910E74B20088BC7009F1DAF /* BaseTabBarController.h in Sources */,
 				9910E74C20088BC7009F1DAF /* BaseTabBarView.h in Sources */,
+				99802090200EEA8F00CF64FE /* SelectDocumentView.m in Sources */,
 				9910E74D20088BC7009F1DAF /* BaseTabBarView.xib in Sources */,
 				99802023200C420E00CF64FE /* registerView.m in Sources */,
 				9910E74E20088BC7009F1DAF /* BaseTableView.h in Sources */,
@@ -2221,6 +2306,7 @@
 				9910E75020088BC7009F1DAF /* BaseTableViewController.h in Sources */,
 				9910E75120088BC7009F1DAF /* BaseView.h in Sources */,
 				9910E75220088BC7009F1DAF /* BaseViewController.h in Sources */,
+				9980209A200EF75B00CF64FE /* WRCustomNavigationBar.m in Sources */,
 				9910E67320088A3A009F1DAF /* UIScrollView+MJExtension.m in Sources */,
 				9910E65020088A39009F1DAF /* MASLayoutConstraint.m in Sources */,
 				9910E66520088A3A009F1DAF /* MJRefreshFooter.m in Sources */,
@@ -2246,6 +2332,7 @@
 				9980205D200C512B00CF64FE /* UserInfoViewController.m in Sources */,
 				9910E68B20088A3A009F1DAF /* NSString+ArvinCategory.m in Sources */,
 				9910E62820088A39009F1DAF /* MWCaptionView.m in Sources */,
+				9980209B200EF75B00CF64FE /* WRNavigationBar.m in Sources */,
 				9910E66820088A3A009F1DAF /* MJRefreshAutoNormalFooter.m in Sources */,
 				9910E64220088A39009F1DAF /* AFURLRequestSerialization.m in Sources */,
 				9910E63B20088A39009F1DAF /* TZPhotoPreviewController.m in Sources */,
@@ -2287,6 +2374,7 @@
 				9910E68020088A3A009F1DAF /* UIButton+WebCache.m in Sources */,
 				9910E66B20088A3A009F1DAF /* MJRefreshBackNormalFooter.m in Sources */,
 				9910E24F200889C2009F1DAF /* BaseButton.m in Sources */,
+				99802089200EDAD200CF64FE /* DocumentViewController.m in Sources */,
 				9910E65620088A39009F1DAF /* ViewController+MASAdditions.m in Sources */,
 				9910E24D200889C2009F1DAF /* BaseTabBarController.m in Sources */,
 				9910E64520088A39009F1DAF /* CDPMonitorKeyboard.m in Sources */,
@@ -2305,7 +2393,6 @@
 				9910E5FC20088A39009F1DAF /* ACMediaImageCell.m in Sources */,
 				9910E60020088A39009F1DAF /* DACircularProgressView.m in Sources */,
 				9910E60620088A39009F1DAF /* UIViewController+ACMediaExt.m in Sources */,
-				9910E68620088A3A009F1DAF /* WRNavigationBar.m in Sources */,
 				9910E63820088A39009F1DAF /* TZImagePickerController.m in Sources */,
 				9910E63120088A39009F1DAF /* NSBundle+TZImagePicker.m in Sources */,
 				9910E62B20088A39009F1DAF /* MWPhoto.m in Sources */,
@@ -2522,6 +2609,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7VA6KRS89B;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/yonghu/PrefixHeader.pch";
 				INFOPLIST_FILE = yonghu/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -2537,6 +2625,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7VA6KRS89B;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/yonghu/PrefixHeader.pch";
 				INFOPLIST_FILE = yonghu/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
